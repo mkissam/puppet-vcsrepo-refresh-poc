@@ -1,0 +1,91 @@
+puppet apply --verbose --debug refresh-test.pp
+Notice: Compiled catalog for vcsrepo-test.openstacklocal in environment production in 0.03 seconds
+Warning: Found multiple default providers for vcsrepo: svn, bzr, cvs, hg, git; using svn
+Debug: Creating default schedules
+Debug: Failed to load library 'selinux' for feature 'selinux'
+Debug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:path=>"/etc/puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist
+Debug: Puppet::Type::User::ProviderPw: file pw does not exist
+Debug: Failed to load library 'ldap' for feature 'ldap'
+Debug: Puppet::Type::User::ProviderLdap: feature ldap is missing
+Debug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist
+Debug: /User[puppet]: Provider useradd does not support features libuser; not managing attribute forcelocal
+Debug: Puppet::Type::Group::ProviderPw: file pw does not exist
+Debug: Failed to load library 'ldap' for feature 'ldap'
+Debug: Puppet::Type::Group::ProviderLdap: feature ldap is missing
+Debug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist
+Debug: /Group[puppet]: Provider groupadd does not support features libuser; not managing attribute forcelocal
+Debug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:path=>"/var/lib/puppet", :owner=>"puppet", :group=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'logdir': 'File[/var/log/puppet]{:path=>"/var/log/puppet", :mode=>"750", :owner=>"puppet", :group=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:path=>"/var/lib/puppet/state", :mode=>"1755", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'rundir': 'File[/var/run/puppet]{:path=>"/var/run/puppet", :mode=>"755", :owner=>"puppet", :group=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'libdir': 'File[/var/lib/puppet/lib]{:path=>"/var/lib/puppet/lib", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'certdir': 'File[/var/lib/puppet/ssl/certs]{:path=>"/var/lib/puppet/ssl/certs", :owner=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'ssldir': 'File[/var/lib/puppet/ssl]{:path=>"/var/lib/puppet/ssl", :mode=>"771", :owner=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'publickeydir': 'File[/var/lib/puppet/ssl/public_keys]{:path=>"/var/lib/puppet/ssl/public_keys", :owner=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'requestdir': 'File[/var/lib/puppet/ssl/certificate_requests]{:path=>"/var/lib/puppet/ssl/certificate_requests", :owner=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'privatekeydir': 'File[/var/lib/puppet/ssl/private_keys]{:path=>"/var/lib/puppet/ssl/private_keys", :mode=>"750", :owner=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'privatedir': 'File[/var/lib/puppet/ssl/private]{:path=>"/var/lib/puppet/ssl/private", :mode=>"750", :owner=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'hostprivkey': 'File[/var/lib/puppet/ssl/private_keys/vcsrepo-test.openstacklocal.pem]{:path=>"/var/lib/puppet/ssl/private_keys/vcsrepo-test.openstacklocal.pem", :mode=>"600", :owner=>"puppet", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'hostpubkey': 'File[/var/lib/puppet/ssl/public_keys/vcsrepo-test.openstacklocal.pem]{:path=>"/var/lib/puppet/ssl/public_keys/vcsrepo-test.openstacklocal.pem", :mode=>"644", :owner=>"puppet", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:path=>"/var/lib/puppet/state/state.yaml", :mode=>"660", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:path=>"/var/lib/puppet/client_yaml", :mode=>"750", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:path=>"/var/lib/puppet/client_data", :mode=>"750", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'agent_disabled_lockfile': 'File[/var/lib/puppet/state/agent_disabled.lock]{:path=>"/var/lib/puppet/state/agent_disabled.lock", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:path=>"/var/lib/puppet/clientbucket", :mode=>"750", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:path=>"/var/lib/puppet/state/last_run_summary.yaml", :mode=>"644", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:path=>"/var/lib/puppet/state/last_run_report.yaml", :mode=>"640", :ensure=>:file, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:path=>"/var/lib/puppet/state/graphs", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:path=>"/var/lib/puppet/facts.d", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet]
+Debug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet]
+Debug: /File[/var/lib/puppet/ssl/certs]: Autorequiring File[/var/lib/puppet/ssl]
+Debug: /File[/var/lib/puppet/ssl]: Autorequiring File[/var/lib/puppet]
+Debug: /File[/var/lib/puppet/ssl/public_keys]: Autorequiring File[/var/lib/puppet/ssl]
+Debug: /File[/var/lib/puppet/ssl/certificate_requests]: Autorequiring File[/var/lib/puppet/ssl]
+Debug: /File[/var/lib/puppet/ssl/private_keys]: Autorequiring File[/var/lib/puppet/ssl]
+Debug: /File[/var/lib/puppet/ssl/private]: Autorequiring File[/var/lib/puppet/ssl]
+Debug: /File[/var/lib/puppet/ssl/private_keys/vcsrepo-test.openstacklocal.pem]: Autorequiring File[/var/lib/puppet/ssl/private_keys]
+Debug: /File[/var/lib/puppet/ssl/public_keys/vcsrepo-test.openstacklocal.pem]: Autorequiring File[/var/lib/puppet/ssl/public_keys]
+Debug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state]
+Debug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet]
+Debug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet]
+Debug: /File[/var/lib/puppet/state/agent_disabled.lock]: Autorequiring File[/var/lib/puppet/state]
+Debug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet]
+Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state]
+Debug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state]
+Debug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state]
+Debug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet]
+Debug: Finishing transaction 24546920
+Debug: Loaded state in 0.00 seconds
+Debug: Executing '/etc/puppet/etckeeper-commit-pre'
+Debug: Loaded state in 0.00 seconds
+Debug: /Stage[main]/Main/Exec[askbot-install]/subscribe: subscribes to Vcsrepo[/srv/askbot]
+Info: Applying configuration version '1441989815'
+Notice: /Stage[main]/Main/Vcsrepo[/srv/askbot]/ensure: Creating repository from latest
+Debug: Executing '/usr/bin/git clone https://github.com/ASKBOT/askbot-devel.git /srv/askbot'
+Debug: Executing '/usr/bin/git tag -l'
+Debug: Executing '/usr/bin/git branch -a'
+Debug: Executing '/usr/bin/git branch -a'
+Debug: Executing '/usr/bin/git checkout --force master'
+Debug: Executing '/usr/bin/git submodule init'
+Debug: Executing '/usr/bin/git submodule update'
+Debug: Executing '/usr/bin/git submodule foreach git submodule init'
+Debug: Executing '/usr/bin/git submodule foreach git submodule update'
+Notice: /Stage[main]/Main/Vcsrepo[/srv/askbot]/ensure: created
+Info: /Stage[main]/Main/Vcsrepo[/srv/askbot]: Scheduling refresh of Exec[askbot-install]
+Debug: /Stage[main]/Main/Vcsrepo[/srv/askbot]: The container Class[Main] will propagate my refresh event
+Debug: Exec[askbot-install](provider=posix): Executing '/bin/echo "Exec triggered."'
+Debug: Executing '/bin/echo "Exec triggered."'
+Notice: /Stage[main]/Main/Exec[askbot-install]: Triggered 'refresh' from 1 events
+Debug: /Stage[main]/Main/Exec[askbot-install]: The container Class[Main] will propagate my refresh event
+Debug: Class[Main]: The container Stage[main] will propagate my refresh event
+Debug: Finishing transaction 16526720
+Debug: Storing state
+Debug: Stored state in 0.10 seconds
+Notice: Finished catalog run in 10.34 seconds
+Debug: Executing '/etc/puppet/etckeeper-commit-post'
+Debug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:path=>"/var/lib/puppet/rrd", :mode=>"750", :owner=>"puppet", :group=>"puppet", :ensure=>:directory, :loglevel=>:debug, :links=>:follow, :backup=>false}'
+Debug: Finishing transaction 24240400
+Debug: Received report to process from vcsrepo-test.openstacklocal
+Debug: Processing report from vcsrepo-test.openstacklocal with processor Puppet::Reports::Store
